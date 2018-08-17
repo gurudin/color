@@ -1,0 +1,2 @@
+# color
+Terminal input color
