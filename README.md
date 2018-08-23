@@ -1,42 +1,80 @@
 # color
 Terminal input color
 
+![Color](https://i.imgur.com/ziC61Zp.png)
+
+## Install
 ```
-color.Black("Hello world")
-color.HighBlack("Hello world")
-color.BgBlack("Hello word")
+go get github.com/gurudin/color
+```
 
-color.Red("Hello world")
-color.HighRed("Hello world")
-color.BgRed("Hello world")
+## Examples
+```
+fmt.Println()
 
-color.Green("Hello world")
-color.HighGreen("Hello world")
-color.BgGreen("Hello world")
+color.HighCyan("Go: ")
+color.Green("Terminal ")
+color.Magenta("input ")
+color.White("color.")
+fmt.Println()
 
-color.Yellow("Hello world")
-color.HighYellow("Hello world")
-color.BgYellow("Hello world")
+color.Black("Black     ")
+color.HighBlack("Black     ")
+color.BgBlack("          ")
+fmt.Println()
 
-color.Blue("Hello world")
-color.HighBlue("Hello world")
-color.BgBlue("Hello world")
+color.Red("Red       ")
+color.HighRed("Red       ")
+color.BgRed("          ")
+fmt.Println()
 
-color.Magenta("Hello world")
-color.HighMagenta("Hello world")
-color.BgMagenta("Hello world")
+color.Green("Green     ")
+color.HighGreen("Green     ")
+color.BgGreen("          ")
+fmt.Println()
 
-color.Cyan("Hello world")
-color.HighCyan("Hello world")
-color.BgCyan("Hello world")
+color.Yellow("Yellow    ")
+color.HighYellow("Yellow    ")
+color.BgYellow("          ")
+fmt.Println()
 
-color.White("Hello world")
-color.HighWhite("Hello world")
-color.BgWhite("Hello world")
+color.Blue("Blue      ")
+color.HighBlue("Blue      ")
+color.BgBlue("          ")
+fmt.Println()
+
+color.Magenta("Magenta   ")
+color.HighMagenta("Magenta   ")
+color.BgMagenta("          ")
+fmt.Println()
+
+color.Cyan("Cyan      ")
+color.HighCyan("Cyan      ")
+color.BgCyan("          ")
+fmt.Println()
+
+color.White("White     ")
+color.HighWhite("White     ")
+color.BgWhite("          ")
+fmt.Println()
 
 fmt.Println()
 
-conf := color.Conf{High: 1, FColor: color.FRed}
+left := color.Conf{High: 1, FColor: color.FWhite, BColor: color.BRed}
+left.Print("===========")
+
+center := color.Conf{High: 1, FColor: color.FWhite, BColor: color.BYellow}
+center.Print(" Custom ")
+
+right := color.Conf{High: 1, FColor: color.FWhite, BColor: color.BBlue}
+right.Print("===========")
+
+fmt.Println()
+```
+
+## Custom
+```
+conf := color.Conf{High: 1, FColor: color.FRed, BColor: color.BWhite}
 conf.Print("=======================")
 fmt.Println()
 ```
